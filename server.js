@@ -8,6 +8,10 @@ const port = process.env.PORT || 7000;
 
 app.use(cors());
 
+// Als een JSON object met request wordt meegestuurd
+// Steek het object in req.body
+app.use(express.json());
+
 // Routes
 app.use("/boeken", boeken);
 
